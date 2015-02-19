@@ -1,0 +1,10 @@
+name: Sciencecraft
+main: de.stonie1901.serverplugin.Main
+version: 0.1-Alpha
+author: stonie1901S
+
+commands:
+    teamspeak:
+        description: Survival Games Command
+        usage: /teamspeak
+        aliases: [ts]
