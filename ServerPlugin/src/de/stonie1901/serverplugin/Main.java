@@ -9,8 +9,10 @@ import org.spigotmc.Metrics;
 
 
 
+
 import de.stonie1901.serverplugin.commands.BukkitserverCommand;
 import de.stonie1901.serverplugin.commands.HilfeCommand;
+import de.stonie1901.serverplugin.commands.PremiumCommand;
 import de.stonie1901.serverplugin.commands.teamspeakCommand;
 import de.stonie1901.serverplugin.commands.teamspeakCommand;
 
@@ -32,12 +34,12 @@ public class Main extends JavaPlugin {
 		PluginManager pm = getServer().getPluginManager();
 		
 		// Copied from Metrics.org
-		try {
+		/*try {
 	        Metrics metrics = new Metrics();
 	        metrics.start();
 	    } catch (IOException e) {
 	        // Failed to submit the stats :-(
-	    }
+	    } */
 		// End
 	}
 	
@@ -46,6 +48,6 @@ public class Main extends JavaPlugin {
 		this.getCommand("teamspeak").setExecutor(new teamspeakCommand());
 		this.getCommand("bukkitserver").setExecutor(new BukkitserverCommand());
 		this.getCommand("hilfe").setExecutor(new HilfeCommand());
-		
+		this.getCommand("premium").setExecutor(new PremiumCommand());
 	}
 }

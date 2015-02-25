@@ -33,7 +33,10 @@ permissions:
         default: true
     sciencecraft.ts:
         description: Gives access to the /teamspeak command
-        default: op
+        default: true
+    sciencecraft.premium:
+        description: Gives access to the premium command
+        default: true
     sciencecraft.user:
         description: Gives access to user commands     
         children:
