@@ -24,7 +24,7 @@ public class teamspeakCommand implements CommandExecutor {
 		        	return true;
 		        } else
 		        {
-		        	player.sendMessage(ChatColor.RED + "You do not have permission to excute this command.");
+		        	player.sendMessage(ChatColor.RED + "Dafuer hast du keine Berechtigung.");
 		            return true;
 		        }
 		      }

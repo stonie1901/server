@@ -1,10 +1,79 @@
 name: Sciencecraft
 main: de.stonie1901.serverplugin.Main
 version: 0.1-Alpha
-author: stonie1901S
+description: Test
+author: stonie1901
 
 commands:
     teamspeak:
-        description: Survival Games Command
-        usage: /teamspeak
+        description: Teamspeak Command
+        usage: /<command>
         aliases: [ts]
+    bukkitserver:
+        description: Info Command
+        usage: /<command>
+        aliases: [bs]
+    hilfe:
+        description: Hilfe Command
+        usage: /<command>
+        
+permissions:
+    sciencecraft.*:
+        description: Gives full access
+        children:
+            sciencecraft.hilfe: true
+            sciencecraft.ts: true
+            lagmeter.command.lagmem: true
+            lagmeter.command.lm: true
+            lagmeter.command.ping: true
+            lagmeter.command.lping: true
+    sciencecraft.help:
+        description: Gives access to the /hilfe command
+        default: true
+    sciencecraft.ts:
+        description: Gives access to the /teamspeak command
+        default: op
+    sciencecraft.user:
+        description: Gives access to user commands     
+        children:
+            sciencecraft.hilfe: true
+            sciencecraft.ts: true
+    lagmeter.command.lm:
+        description: Gives access to the combination /lm command, which is a shorter version of /lagmem.
+        default: op
+    lagmeter.command.lchunks:
+        description: Gives access to the /lchunks command, which shows the amount of chunks loaded per world, and the amount total.
+        default: op
+    lagmeter.command.lmp:
+        description: Gives access to the /lmp command, which shows TPS, memory, and players online.
+        default: op
+    lagmeter.command.uptime:
+        description: Gives access to the /uptime command, which shows how long the server has been online.
+        default: op
+    lagmeter.command.lentities:
+        description: Node for the command for showing entities on the server.
+        children:
+            lagmeter.command.lmobs: true
+        default: op
+    lagmeter.command.lagmeter.help:
+        description: Gives access to the /lm help command, which shows commands the sender has access to.
+        default: op
+    lagmeter.command.lagmeter.reload:
+        description: Gives access to the /lm reload command, which reloads the plugin configuration.
+        default: op
+    lagmeter.help:
+        description: Gives access to the /lm help command, which shows commands the sender has access to.
+        default: op
+    lagmeter.reload:
+        description: Gives access to the /lm reload command, which reloads the plugin configuration.
+        default: op
+    lagmeter.notify.lag:
+        description: Allows the player/group to receive lag notifications.
+        default: op
+    lagmeter.notify.mem:
+        description: Allows the player/group to receive memory notifications.
+        default: op
+    lagmeter.commands.lagmap:
+        description: Allows the player or group to use LagMaps, which update with the TPS and memory usage automatically.
+        default: op
+categories: [INFO]      
