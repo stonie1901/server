@@ -24,7 +24,7 @@ permissions:
         children:
             sciencecraft.hilfe: true
             sciencecraft.ts: true
-            lagmeter.command.lagmem: true
+            sciencecraft.facebook: true
             lagmeter.command.lm: true
             lagmeter.command.ping: true
             lagmeter.command.lping: true
@@ -41,4 +41,5 @@ permissions:
         description: Gives access to user commands     
         children:
             sciencecraft.hilfe: true
-            sciencecraft.ts: true 
+            sciencecraft.ts: true
+            sciencecraft.facebook: true

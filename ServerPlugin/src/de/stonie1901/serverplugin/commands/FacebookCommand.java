@@ -6,21 +6,22 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import de.stonie1901.serverplugin.Main;
-
-public class teamspeakCommand implements CommandExecutor {
-	public Main plugin;
+public class FacebookCommand implements CommandExecutor {
 
 	@Override
 	public boolean onCommand(CommandSender cs, Command cmd, String label, String[] args) {
 		
-		if (cmd.getName().equalsIgnoreCase("teamspeak")) {
+		if (cmd.getName().equalsIgnoreCase("facebook")) {
 		      if ((cs instanceof Player))
 		      {
 		        Player player = (Player)cs;
-		        if (player.hasPermission("sciencecraft.ts"))
+		        if (player.hasPermission("sciencecraft.facebook"))
 		        {
-		        	player.sendMessage(ChatColor.BLACK + "test");
+		        	player.sendMessage(ChatColor.RED + "Du willst uns auf Facebook liken?");
+		        	player.sendMessage(ChatColor.GREEN + "");
+		        	player.sendMessage(ChatColor.GREEN + "Hier hast du den Link! Danke schonmal im voraus!");
+		        	player.sendMessage(ChatColor.GREEN + "");
+		        	player.sendMessage(ChatColor.GREEN + "http://goo.gl/i1H0Io");
 		        	return true;
 		        } else
 		        {

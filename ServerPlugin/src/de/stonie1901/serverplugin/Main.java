@@ -10,7 +10,9 @@ import org.spigotmc.Metrics;
 
 
 
+
 import de.stonie1901.serverplugin.commands.BukkitserverCommand;
+import de.stonie1901.serverplugin.commands.FacebookCommand;
 import de.stonie1901.serverplugin.commands.HilfeCommand;
 import de.stonie1901.serverplugin.commands.PremiumCommand;
 import de.stonie1901.serverplugin.commands.teamspeakCommand;
@@ -49,5 +51,6 @@ public class Main extends JavaPlugin {
 		this.getCommand("bukkitserver").setExecutor(new BukkitserverCommand());
 		this.getCommand("hilfe").setExecutor(new HilfeCommand());
 		this.getCommand("premium").setExecutor(new PremiumCommand());
+		this.getCommand("facebook").setExecutor(new FacebookCommand());
 	}
 }
